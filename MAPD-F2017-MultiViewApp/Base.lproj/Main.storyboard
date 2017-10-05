@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="722-gR-Ejm">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="722-gR-Ejm">
+                                <rect key="frame" x="0.0" y="627.5" width="375" height="39.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <barButtonItem title="Switch Views" id="ZhU-Lu-49v">
                                         <connections>
@@ -27,18 +28,24 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Muk-EL-P1g">
+                                <rect key="frame" x="0.0" y="20" width="375" height="25.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="722-gR-Ejm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7QG-7I-rVw"/>
-                            <constraint firstItem="722-gR-Ejm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fnw-WA-oJi"/>
-                            <constraint firstItem="722-gR-Ejm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gNm-jD-M15"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Muk-EL-P1g" id="MXe-DN-nkP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="80.50974512743629"/>
         </scene>
         <!--Blue View Controller-->
         <scene sceneID="I3G-XD-lFq">

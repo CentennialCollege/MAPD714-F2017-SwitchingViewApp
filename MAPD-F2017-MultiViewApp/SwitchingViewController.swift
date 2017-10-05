@@ -4,6 +4,7 @@ class SwitchingViewController: UIViewController{
     // PRIVATE INSTANCE VARIABLES
     private var _blueViewController:BlueViewController!
     private var _yellowViewController:YellowViewController!
+    @IBOutlet weak var welcomeLabel: UILabel!
     
     // this triggers after the applications loads
     override func viewDidLoad() {
@@ -12,6 +13,7 @@ class SwitchingViewController: UIViewController{
         self._blueViewController = storyboard?.instantiateViewController(withIdentifier: "Blue") as! BlueViewController
         
         self._blueViewController.view.frame = view.frame
+        self.welcomeLabel.text = "Welcome to Blue!"
         switchViewController(from: nil, to: self._blueViewController)
     }
     
@@ -31,9 +33,11 @@ class SwitchingViewController: UIViewController{
         // clean up current controller and attach the new one
         if self._blueViewController != nil && self._blueViewController!.view.superview != nil {
             self._yellowViewController.view.frame = view.frame
+            self.welcomeLabel.text = "Welcome to Yellow!"
             switchViewController(from: self._blueViewController, to: self._yellowViewController)
         } else {
             self._blueViewController.view.frame = view.frame
+            self.welcomeLabel.text = "Welcome to Blue!"
             switchViewController(from: self._yellowViewController, to: self._blueViewController)
         }
     }
@@ -43,6 +47,7 @@ class SwitchingViewController: UIViewController{
         
         // cleans up current view controller
         if fromVC != nil {
+            
             fromVC!.willMove(toParentViewController: nil)
             fromVC!.view.removeFromSuperview()
             fromVC!.removeFromParentViewController()
